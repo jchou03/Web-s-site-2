@@ -12,7 +12,15 @@ a{
 }
 button{
     background-color: tomato;
-    border-color: tomato;
+    padding:20px;
+    border: 2px solid tomato;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: #2E4057;
+    transition-duration:0.4s;
 }
 #header{
     background-color: tomato;

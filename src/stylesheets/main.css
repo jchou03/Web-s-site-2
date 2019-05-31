@@ -10,6 +10,10 @@ h1{
 a{
     text-decoration: none;
 }
+button{
+    background-color: tomato;
+    border-color: tomato;
+}
 #header{
     background-color: tomato;
     

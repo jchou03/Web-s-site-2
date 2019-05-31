@@ -1,0 +1,13 @@
+html body{
+    margin: 0px;
+    padding: 0px;
+    font-family: monospace;
+}
+h1{
+    text-align: center;
+}
+#header{
+    background-color: tomato;
+    padding: 15px;
+    text-decoration: none;
+}

@@ -7,6 +7,6 @@ $(document).ready(function(){
     $("#button").click(function(){
         console.log(shown);
         shown += 1;
-        $("#" + shown).show();
+        $("#" + shown).fadeIn();
     })
 })

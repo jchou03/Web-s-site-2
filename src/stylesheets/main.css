@@ -2,6 +2,7 @@ html body{
     margin: 0px;
     padding: 0px;
     font-family: monospace;
+    font-size: 20px;
 }
 h1{
     text-align: center;
@@ -12,7 +13,7 @@ a{
 }
 button{
     background-color: tomato;
-    padding:20px;
+    padding:14px 16px;
     border: 2px solid tomato;
     font-size: 20px;
     color: white;

@@ -6,6 +6,7 @@ $(document).ready(function(){
     $(".content").css("background-color","aqua");
     $("#button").click(function(){
         console.log(shown);
+        $("#" + shown).hide();
         shown += 1;
         $("#" + shown).fadeIn();
     })

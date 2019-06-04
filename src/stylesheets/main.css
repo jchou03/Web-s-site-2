@@ -11,6 +11,10 @@ h1{
 a{
     text-decoration: none;
 }
+.next {
+    width: 10%;
+    margin-left: 45%;
+}
 button{
     background-color: tomato;
     padding:14px 16px;

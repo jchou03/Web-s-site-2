@@ -5,6 +5,8 @@ $(document).ready(function(){
     // hide all of the text, but make it so each one can individually be shown
     $(".hide > p").addClass("hideOnStart");
     $(".hideOnStart").hide();
+    // when clicking the button, show the next part of the story
+	$("#" + shown).fadeIn();
     
     $(".next").click(function(){//for buttons of the next class, it cycles through
         if(path != ""){
@@ -24,6 +26,9 @@ $(document).ready(function(){
         id = "#"+ path + shown;
         console.log(id);
         shown += 1;
+        for (var i = 0; i < shown; i++) {
+			$("#" + i).hide();
+		}
         $(id).fadeIn();
     })
     
@@ -33,6 +38,9 @@ $(document).ready(function(){
         console.log(id);
         $(id).fadeIn();
         shown += 1;
+        for (var i = 0; i < shown; i++) {
+			$("#" + i).hide();
+		}
     })
     
 })

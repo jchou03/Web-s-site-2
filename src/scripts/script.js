@@ -7,7 +7,6 @@ $(document).ready(function(){
     $(".hideOnStart").hide();
     // when clicking the button, show the next part of the story
 	$("#" + shown).fadeIn();
-    shown += 1;
     
     $(".next").click(function(){//for buttons of the next class, it cycles through
         if(path != ""){
@@ -18,6 +17,9 @@ $(document).ready(function(){
         console.log(id);
         $(id).fadeIn();
         shown += 1;
+		if($(".option1").is(":visible") || $(".option2").is(":visible")){
+			$(".next").hide();
+		}
     })
     if(path == "normal"){
         console.log("banana");
@@ -31,17 +33,19 @@ $(document).ready(function(){
 			$("#" + i).hide();
 		}
         $(id).fadeIn();
+		$(".next").fadeIn();
     })
     
     $(".option2").click(function(){//for buttons of the option2 class, it goes forward 5
         path = "depression";
         id = "#"+ path + shown;
         console.log(id);
-        $(id).fadeIn();
         shown += 1;
         for (var i = 0; i < shown; i++) {
 			$("#" + i).hide();
 		}
+		$(id).fadeIn();
+		$(".next").fadeIn();
     })
     $(".option3").click(function(){//for buttons of the option2 class, it goes forward 5
         path = "comedy";
@@ -54,3 +58,4 @@ $(document).ready(function(){
 		}
     })
 })
+

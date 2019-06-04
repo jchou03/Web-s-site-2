@@ -65,7 +65,7 @@ function nextElement(){
     console.log(id);
     $(id).fadeIn();
     shown += 1;
-    if($(".choice").is(":visible")){
-        $(".next").hide();
-    }
+	if($(".choice").is(":visible")){
+		$(".next").hide();
+	}
 }

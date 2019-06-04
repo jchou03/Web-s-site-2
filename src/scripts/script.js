@@ -9,13 +9,9 @@ $(document).ready(function(){
     // when clicking the button, show the next part of the story
 	$("#" + shown).fadeIn();
     shown += 1;
-
     $(".next").click(function(){//for buttons of the next class, it cycles through
         nextElement();
     })
-    if(path == "normal"){
-        console.log("banana");
-    }
     $("#normal").click(function(){//for buttons of the option1 class
         path = "normal";
         nextElement();

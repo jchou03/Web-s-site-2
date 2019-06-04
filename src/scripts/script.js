@@ -26,6 +26,9 @@ $(document).ready(function(){
         console.log(shown);
         $("#" + shown).hide();
         shown += 6;//goes 5 ahead
+		for (var i = 0; i < shown; i++) {
+			$("#" + i).hide();
+		}
         $("#" + shown).fadeIn();
     })
     

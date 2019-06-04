@@ -4,12 +4,8 @@ $(document).ready(function(){
     $(".hide > p").addClass("hideOnStart");
     $(".hideOnStart").hide();
     // when clicking the button, show the next part of the story
-    $("#button").click(function(){
     $(".hide > p").addClass("hideOnStart");//adds p in hide div
-    $(".hide > button").addClass("hideOnStart");//adds button in hide div
     $(".hideOnStart").hide();//hides all in hideonstart class
-    $("#3").hide();
-    $(".content").css("background-color","aqua");//sets background color to aqua
     
     $(".next").click(function(){//for buttons of the next class, it cycles through
         console.log(shown);

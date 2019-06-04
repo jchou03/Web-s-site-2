@@ -57,5 +57,16 @@ $(document).ready(function(){
 			$("#" + i).hide();
 		}
     })
+	    })
+    $(".option5").click(function(){
+        path = "chaos";
+        id = "#"+ path + shown;
+        console.log(id);
+        $(id).fadeIn();
+        shown += 1;
+        for (var i = 0; i < shown; i++) {
+			$("#" + i).hide();
+		}
+    })
 })
 

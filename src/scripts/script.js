@@ -43,5 +43,14 @@ $(document).ready(function(){
 			$("#" + i).hide();
 		}
     })
-    
+    $(".option3").click(function(){//for buttons of the option2 class, it goes forward 5
+        path = "comedy";
+        id = "#"+ path + shown;
+        console.log(id);
+        $(id).fadeIn();
+        shown += 1;
+        for (var i = 0; i < shown; i++) {
+			$("#" + i).hide();
+		}
+    })
 })

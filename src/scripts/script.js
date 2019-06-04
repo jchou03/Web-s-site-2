@@ -1,22 +1,17 @@
-$(document).ready(function(){
-    var shown = 0;
-    var path = "";
-    var id= "#"+shown;
+var shown = 0;
+var path = "";
+var id= "#"+shown;
+
+$(document).ready(function(){    
     // hide all of the text, but make it so each one can individually be shown
     $(".hide > p").addClass("hideOnStart");
     $(".hideOnStart").hide();
     // when clicking the button, show the next part of the story
 	$("#" + shown).fadeIn();
-    
+    shown += 1;
+
     $(".next").click(function(){//for buttons of the next class, it cycles through
-        if(path != ""){
-            id = "#"+ path + shown;
-        }else{
-            id= "#" + shown;
-        }
-        console.log(id);
-        $(id).fadeIn();
-        shown += 1;
+        nextElement();
 		if($(".option1").is(":visible") || $(".option2").is(":visible")){
 			$(".next").hide();
 		}
@@ -24,11 +19,9 @@ $(document).ready(function(){
     if(path == "normal"){
         console.log("banana");
     }
-    $(".option1").click(function(){//for buttons of the option1 class, it goes forwards 1
+    $("#normal").click(function(){//for buttons of the option1 class
         path = "normal";
-        id = "#"+ path + shown;
-        console.log(id);
-        shown += 1;
+        nextElement();
         for (var i = 0; i < shown; i++) {
 			$("#" + i).hide();
 		}
@@ -36,16 +29,47 @@ $(document).ready(function(){
 		$(".next").fadeIn();
     })
     
-    $(".option2").click(function(){//for buttons of the option2 class, it goes forward 5
+    $("#depression").click(function(){//for buttons of the option2 class
         path = "depression";
-        id = "#"+ path + shown;
-        console.log(id);
-        shown += 1;
+        nextElement();
         for (var i = 0; i < shown; i++) {
 			$("#" + i).hide();
-		}
-		$(id).fadeIn();
-		$(".next").fadeIn();
+        }
+        $(".next").fadeIn();
     })
-    
+    $("#romance").click(function(){//for buttons of the option2 class
+        path = "romance";
+        nextElement();
+        for (var i = 0; i < shown; i++) {
+			$("#" + i).hide();
+        }
+        $(".next").fadeIn();
+    })
+    $("#comedy").click(function(){//for buttons of the option2 class
+        path = "comedy";
+        nextElement();
+        for (var i = 0; i < shown; i++) {
+			$("#" + i).hide();
+        }
+        $(".next").fadeIn();
+    })
+    $("#chaos").click(function(){//for buttons of the option2 class
+        path = "chaos";
+        nextElement();
+        for (var i = 0; i < shown; i++) {
+			$("#" + i).hide();
+        }
+        $(".next").fadeIn();
+    })
 })
+
+function nextElement(){
+    if(path != ""){
+        id = "#"+ path + shown;
+    }else{
+        id= "#" + shown;
+    }
+    console.log(id);
+    $(id).fadeIn();
+    shown += 1;
+}

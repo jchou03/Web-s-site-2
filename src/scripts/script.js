@@ -7,6 +7,7 @@ $(document).ready(function(){
     $(".hideOnStart").hide();
     // when clicking the button, show the next part of the story
 	$("#" + shown).fadeIn();
+    shown += 1;
     
     $(".next").click(function(){//for buttons of the next class, it cycles through
         if(path != ""){

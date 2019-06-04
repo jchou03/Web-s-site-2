@@ -47,7 +47,7 @@ $(document).ready(function(){
 		$(id).fadeIn();
 		$(".next").fadeIn();
     })
-    $(".option3").click(function(){//for buttons of the option2 class, it goes forward 5
+    $(".option4").click(function(){//for buttons of the option2 class, it goes forward 5
         path = "comedy";
         id = "#"+ path + shown;
         console.log(id);

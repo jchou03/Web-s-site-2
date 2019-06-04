@@ -17,6 +17,9 @@ $(document).ready(function(){
         console.log(id);
         $(id).fadeIn();
         shown += 1;
+		if($(".option1").is(":visible") || $(".option2").is(":visible")){
+			$(".next").hide();
+		}
     })
     if(path == "normal"){
         console.log("banana");
@@ -30,17 +33,19 @@ $(document).ready(function(){
 			$("#" + i).hide();
 		}
         $(id).fadeIn();
+		$(".next").fadeIn();
     })
     
     $(".option2").click(function(){//for buttons of the option2 class, it goes forward 5
         path = "depression";
         id = "#"+ path + shown;
         console.log(id);
-        $(id).fadeIn();
         shown += 1;
         for (var i = 0; i < shown; i++) {
 			$("#" + i).hide();
 		}
+		$(id).fadeIn();
+		$(".next").fadeIn();
     })
     
 })

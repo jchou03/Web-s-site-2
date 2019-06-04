@@ -11,9 +11,6 @@ $(document).ready(function(){
     shown += 1;
     $(".next").click(function(){//for buttons of the next class, it cycles through
         nextElement();
-		if($(".option1").is(":visible") || $(".option2").is(":visible")){
-			$(".next").hide();
-		}
     })
     $("#normal").click(function(){//for buttons of the option1 class
         path = "normal";
@@ -68,4 +65,7 @@ function nextElement(){
     console.log(id);
     $(id).fadeIn();
     shown += 1;
+    if($(".choice").is(":visible")){
+        $(".next").hide();
+    }
 }

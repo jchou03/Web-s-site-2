@@ -158,17 +158,17 @@ $(document).ready(function(){
         path = "comedy";
         nextElement();
     })
-        $("whatsLigma").click(function(){
+        $(".whatsLigma").click(function(){
             newPath();
-            path = "whatsLigma";
+            path = ".whatsLigma";
             nextElement();
     })
-            $("lolOutLoud").click(function(){
+            $("#lolOutLoud").click(function(){
             newPath();
             path = "lolOutLoud";
             nextElement();
     })
-            $("loser").click(function(){
+            $("#loser").click(function(){
             newPath();
             path = "loser";
             nextElement();
@@ -213,6 +213,11 @@ $(document).ready(function(){
 // function to show the next element and increase shown counter
 function nextElement(){
     id= "#" + path + shown;
+    if(id=="#noConfess5"){
+        path = "confess";
+        shown = 3;
+        id = "#" + path + shown;
+    }
     if(!($(id).length)){
         id="#"+ oldPath + oldShown;
         path = oldPath;

@@ -82,19 +82,47 @@ $(document).ready(function(){
         nextElement();
     })
         $("#runClass").click(function(){
-            oldPath = "romance";
+            oldPath = path;
             oldShown = shown;
             newPath();
             path = "runClass";
             nextElement();
         })
         $("#walkClass").click(function(){
-            oldPath = "romance";
+            oldPath = path;
             oldShown = shown;
             newPath();
             path = "walkClass";
             nextElement();
         })
+        $("#followHer").click(function(){
+            oldPath = path;
+            oldShown = shown;
+            newPath();
+            path = "followHer";
+            nextElement();
+        })
+        $("#noFollow").click(function(){
+            oldPath = path;
+            oldShown = shown;
+            newPath();
+            path = "followHer";
+            nextElement();
+        })
+            $("#confess").click(function(){
+                oldPath = path;
+                oldShown = shown;
+                newPath();
+                path = "confess";
+                nextElement();
+            })
+            $("#noConfess").click(function(){
+                oldPath = path;
+                oldShown = shown;
+                newPath();
+                path = "noConfess";
+                nextElement();
+            })
 
     $("#comedy").click(function(){//for buttons of the option2 class
         newPath();
@@ -174,9 +202,7 @@ function nextElement(){
 
 // function to reset the shown counter to 1 and hide all of the previous parts
 function newPath(){
-    for (var i = 0; i < shown; i++) {
-        $("#" + path + i).hide();
-    }
+    $("p").hide();
     shown = 1;
     $(".next").fadeIn();
 }

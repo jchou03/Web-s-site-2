@@ -56,6 +56,16 @@ $(document).ready(function(){
         path = "chaos";
         nextElement();
     })
+	$("#Accept").click(function(){
+            newPath();
+            path = "Accept";
+            nextElement();
+        })
+	$("#Decline").click(function(){
+           newPath();
+           path = "Decline";
+           nextElement();
+        })
 })
 
 // function to show the next element and increase shown counter

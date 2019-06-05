@@ -13,37 +13,47 @@ $(document).ready(function(){
         nextElement();
     })
     $("#normal").click(function(){//for buttons of the option1 class
+        newPath();
         path = "normal";
-        newPath();
         nextElement();
     })
+    
     $("#depression").click(function(){//for buttons of the option2 class
+        newPath();
         path = "depression";
-        newPath();
         nextElement();
     })
-    $("#bathroom").click(function(){//for buttons of the option2 class
-        path = "bathroom";
-        newPath();
-        nextElement();
-    })
+        $("#bathroom").click(function(){//for buttons of the option2 class
+            newPath();
+            path = "bathroom";
+            nextElement();
+        })
+    
     $("#romance").click(function(){//for buttons of the option2 class
+        newPath();
         path = "romance";
-        newPath();
         nextElement();
     })
+        $("#runClass").click(function(){
+            newPath();
+            path = "runClass";
+            nextElement();
+        })
+
     $("#comedy").click(function(){//for buttons of the option2 class
-        path = "comedy";
         newPath();
+        path = "comedy";
         nextElement();
     })
+    
     $("#chaos").click(function(){//for buttons of the option2 class
-        path = "chaos";
         newPath();
+        path = "chaos";
         nextElement();
     })
 })
 
+// function to show the next element and increase shown counter
 function nextElement(){
     if(path != ""){
         id = "#"+ path + shown;
@@ -58,9 +68,10 @@ function nextElement(){
 	}
 }
 
+// function to reset the shown counter to 1 and hide all of the previous parts
 function newPath(){
     for (var i = 0; i < shown; i++) {
-        $("#" + i).hide();
+        $("#" + path + i).hide();
     }
     shown = 1;
     $(".next").fadeIn();

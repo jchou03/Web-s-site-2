@@ -109,6 +109,10 @@ function nextElement(){
     id= "#" + path + shown;
     if(!($(id).length)){
         id="#"+ oldPath + oldShown;
+        path = oldPath;
+        shown = oldShown;
+        oldPath="";
+        oldShown=1;
     }
     
     console.log(id);

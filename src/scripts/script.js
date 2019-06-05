@@ -19,6 +19,16 @@ $(document).ready(function(){
         path = "normal";
         nextElement();
     })
+	$("#sleep").click(function(){//for buttons of the option1 class
+        newPath();
+        path = "sleep";
+        nextElement();
+    })
+	$("#awake").click(function(){//for buttons of the option1 class
+        newPath();
+        path = "awake";
+        nextElement();
+    })
     
     $("#depression").click(function(){//for buttons of the option2 class
         newPath();
@@ -82,6 +92,16 @@ $(document).ready(function(){
            path = "Skip";
            nextElement();
         })
+		$("#SocialInteraction").click(function(){
+         	  newPath();
+        	   path = "SocialInteraction";
+        	   nextElement();
+       		 })
+			$("#WhatIsSociality").click(function(){
+         	  newPath();
+         	  path = "WhatIsSociality";
+         	  nextElement();
+       		 })
 })
 
 // function to show the next element and increase shown counter

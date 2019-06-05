@@ -101,7 +101,21 @@ $(document).ready(function(){
         path = "comedy";
         nextElement();
     })
-    
+        $("whatsLigma").click(function(){
+            newPath();
+            path = "whatsLigma";
+            nextElement();
+    })
+            $("lolOutLoud").click(function(){
+            newPath();
+            path = "lolOutLoud";
+            nextElement();
+    })
+            $("loser").click(function(){
+            newPath();
+            path = "loser";
+            nextElement();
+    })
     $("#chaos").click(function(){//for buttons of the option2 class
         newPath();
         path = "chaos";

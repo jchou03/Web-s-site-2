@@ -188,6 +188,11 @@ $(document).ready(function(){
 // function to show the next element and increase shown counter
 function nextElement(){
     id= "#" + path + shown;
+    if(id=="#noConfess5"){
+        path = "confess";
+        shown = 3;
+        id = "#" + path + shown;
+    }
     if(!($(id).length)){
         id="#"+ oldPath + oldShown;
         path = oldPath;

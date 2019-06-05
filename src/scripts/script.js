@@ -66,6 +66,16 @@ $(document).ready(function(){
            path = "Decline";
            nextElement();
         })
+		$("#GoToSchool").click(function(){
+           newPath();
+           path = "GoToSchool";
+           nextElement();
+        })
+		$("#Skip").click(function(){
+           newPath();
+           path = "Skip";
+           nextElement();
+        })
 })
 
 // function to show the next element and increase shown counter

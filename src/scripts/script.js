@@ -86,11 +86,11 @@ $(document).ready(function(){
 
 // function to show the next element and increase shown counter
 function nextElement(){
-    if(path != ""){
-        id = "#"+ path + shown;
-    }else{
-        id= "#" + shown;
+    id= "#" + path + shown;
+    if(!($(id).length)){
+        id="#"+ oldPath + oldShown;
     }
+    
     console.log(id);
     $(id).fadeIn();
     shown += 1;

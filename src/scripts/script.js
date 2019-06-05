@@ -85,25 +85,28 @@ $(document).ready(function(){
             newPath();
             path = "argue";
             nextElement();
+        })
             $("#principal").click(function(){//for buttons of the option2 class
                 oldPath = path;
                 oldShown = shown;
                 newPath();
                 path = "principal";
                 nextElement();
+            })
             $("#margue").click(function(){//for buttons of the option2 class
                 oldPath = path;
                 oldShown = shown;
                 newPath();
                 path = "margue";
                 nextElement();
+            })
         $("#sitdown").click(function(){//for buttons of the option2 class
             oldPath = path;
             oldShown = shown;
             newPath();
             path = "sitdown";
             nextElement();
-              
+        })
     
     $("#romance").click(function(){//for buttons of the option2 class
         newPath();
@@ -249,5 +252,5 @@ function branchingPath(oldPath, oldShown){
     shown += 1;
 	if($(".choice").is(":visible")){
 		$(".next").hide();
-	}
+    }
 }

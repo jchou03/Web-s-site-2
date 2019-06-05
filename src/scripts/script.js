@@ -36,6 +36,8 @@ $(document).ready(function(){
         nextElement();
     })
         $("#bathroom").click(function(){//for buttons of the option2 class
+            oldPath = path;
+            oldShown = shown;
             newPath();
             path = "bathroom";
             nextElement();
@@ -51,6 +53,8 @@ $(document).ready(function(){
                 nextElement();
             })
         $("#walking").click(function(){//for buttons of the option2 class
+            oldPath = path;
+            oldShown = shown;
             newPath();
             path = "walking";
             nextElement();

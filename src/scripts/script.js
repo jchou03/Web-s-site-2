@@ -39,6 +39,11 @@ $(document).ready(function(){
             path = "runClass";
             nextElement();
         })
+        $("#walkClass").click(function(){
+            newPath();
+            path = "walkClass";
+            nextElement();
+        })
 
     $("#comedy").click(function(){//for buttons of the option2 class
         newPath();
@@ -75,4 +80,19 @@ function newPath(){
     }
     shown = 1;
     $(".next").fadeIn();
+}
+
+// function for branching paths out that plan on coming back together
+function branchingPath(){
+    if(path != ""){
+        id = "#"+ path + shown;
+    }else{
+        id= "#" + shown;
+    }
+    console.log(id);
+    $(id).fadeIn();
+    shown += 1;
+	if($(".choice").is(":visible")){
+		$(".next").hide();
+	}
 }

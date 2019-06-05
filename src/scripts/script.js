@@ -1,6 +1,8 @@
 var shown = 0;
 var path = "";
 var id= "#"+shown;
+var oldPath = "";
+var oldShown = 1;
 
 $(document).ready(function(){    
     // hide all of the text, but make it so each one can individually be shown
@@ -35,11 +37,15 @@ $(document).ready(function(){
         nextElement();
     })
         $("#runClass").click(function(){
+            oldPath = "romance";
+            oldShown = shown;
             newPath();
             path = "runClass";
             nextElement();
         })
         $("#walkClass").click(function(){
+            oldPath = "romance";
+            oldShown = shown;
             newPath();
             path = "walkClass";
             nextElement();
@@ -93,12 +99,8 @@ function newPath(){
 }
 
 // function for branching paths out that plan on coming back together
-function branchingPath(){
-    if(path != ""){
-        id = "#"+ path + shown;
-    }else{
-        id= "#" + shown;
-    }
+function branchingPath(oldPath, oldShown){
+    id = "#"+ oldPath + oldShown;
     console.log(id);
     $(id).fadeIn();
     shown += 1;

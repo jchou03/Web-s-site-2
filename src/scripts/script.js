@@ -135,7 +135,7 @@ $(document).ready(function(){
     })
         $(".whatsLigma").click(function(){
             newPath();
-            path = ".whatsLigma";
+            path = "whatsLigma";
             nextElement();
     })
             $("#lolOutLoud").click(function(){

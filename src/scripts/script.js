@@ -133,17 +133,17 @@ $(document).ready(function(){
         path = "comedy";
         nextElement();
     })
-        $("whatsLigma").click(function(){
+        $(".whatsLigma").click(function(){
             newPath();
-            path = "whatsLigma";
+            path = ".whatsLigma";
             nextElement();
     })
-            $("lolOutLoud").click(function(){
+            $("#lolOutLoud").click(function(){
             newPath();
             path = "lolOutLoud";
             nextElement();
     })
-            $("loser").click(function(){
+            $("#loser").click(function(){
             newPath();
             path = "loser";
             nextElement();

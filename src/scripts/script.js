@@ -14,45 +14,33 @@ $(document).ready(function(){
     })
     $("#normal").click(function(){//for buttons of the option1 class
         path = "normal";
+        newPath();
         nextElement();
-        for (var i = 0; i < shown; i++) {
-			$("#" + i).hide();
-		}
-        $(id).fadeIn();
-		$(".next").fadeIn();
     })
-    
     $("#depression").click(function(){//for buttons of the option2 class
         path = "depression";
+        newPath();
         nextElement();
-        for (var i = 0; i < shown; i++) {
-			$("#" + i).hide();
-        }
-        $(".next").fadeIn();
+    })
+    $("#bathroom").click(function(){//for buttons of the option2 class
+        path = "bathroom";
+        newPath();
+        nextElement();
     })
     $("#romance").click(function(){//for buttons of the option2 class
         path = "romance";
+        newPath();
         nextElement();
-        for (var i = 0; i < shown; i++) {
-			$("#" + i).hide();
-        }
-        $(".next").fadeIn();
     })
     $("#comedy").click(function(){//for buttons of the option2 class
         path = "comedy";
+        newPath();
         nextElement();
-        for (var i = 0; i < shown; i++) {
-			$("#" + i).hide();
-        }
-        $(".next").fadeIn();
     })
     $("#chaos").click(function(){//for buttons of the option2 class
         path = "chaos";
+        newPath();
         nextElement();
-        for (var i = 0; i < shown; i++) {
-			$("#" + i).hide();
-        }
-        $(".next").fadeIn();
     })
 })
 
@@ -68,4 +56,12 @@ function nextElement(){
 	if($(".choice").is(":visible")){
 		$(".next").hide();
 	}
+}
+
+function newPath(){
+    for (var i = 0; i < shown; i++) {
+        $("#" + i).hide();
+    }
+    shown = 1;
+    $(".next").fadeIn();
 }

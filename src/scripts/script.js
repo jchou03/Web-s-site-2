@@ -1,6 +1,8 @@
 var shown = 0;
 var path = "";
 var id= "#"+shown;
+var oldPath = "";
+var oldShown = 1;
 
 $(document).ready(function(){    
     // hide all of the text, but make it so each one can individually be shown
@@ -15,6 +17,16 @@ $(document).ready(function(){
     $("#normal").click(function(){//for buttons of the option1 class
         newPath();
         path = "normal";
+        nextElement();
+    })
+	$("#sleep").click(function(){//for buttons of the option1 class
+        newPath();
+        path = "sleep";
+        nextElement();
+    })
+	$("#awake").click(function(){//for buttons of the option1 class
+        newPath();
+        path = "awake";
         nextElement();
     })
     
@@ -70,11 +82,15 @@ $(document).ready(function(){
         nextElement();
     })
         $("#runClass").click(function(){
+            oldPath = "romance";
+            oldShown = shown;
             newPath();
             path = "runClass";
             nextElement();
         })
         $("#walkClass").click(function(){
+            oldPath = "romance";
+            oldShown = shown;
             newPath();
             path = "walkClass";
             nextElement();
@@ -111,15 +127,29 @@ $(document).ready(function(){
            path = "Skip";
            nextElement();
         })
+		$("#SocialInteraction").click(function(){
+         	  newPath();
+        	   path = "SocialInteraction";
+        	   nextElement();
+       		 })
+			$("#WhatIsSociality").click(function(){
+         	  newPath();
+         	  path = "WhatIsSociality";
+         	  nextElement();
+       		 })
 })
 
 // function to show the next element and increase shown counter
 function nextElement(){
-    if(path != ""){
-        id = "#"+ path + shown;
-    }else{
-        id= "#" + shown;
+    id= "#" + path + shown;
+    if(!($(id).length)){
+        id="#"+ oldPath + oldShown;
+        path = oldPath;
+        shown = oldShown;
+        oldPath="";
+        oldShown=1;
     }
+    
     console.log(id);
     $(id).fadeIn();
     shown += 1;
@@ -138,12 +168,8 @@ function newPath(){
 }
 
 // function for branching paths out that plan on coming back together
-function branchingPath(){
-    if(path != ""){
-        id = "#"+ path + shown;
-    }else{
-        id= "#" + shown;
-    }
+function branchingPath(oldPath, oldShown){
+    id = "#"+ oldPath + oldShown;
     console.log(id);
     $(id).fadeIn();
     shown += 1;

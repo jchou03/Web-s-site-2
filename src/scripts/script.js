@@ -28,6 +28,41 @@ $(document).ready(function(){
             path = "bathroom";
             nextElement();
         })
+            $("#stall").click(function(){//for buttons of the option2 class
+                newPath();
+                path = "stall";
+                nextElement();
+            })
+            $("#hands").click(function(){//for buttons of the option2 class
+                newPath();
+                path = "hands";
+                nextElement();
+            })
+        $("#walking").click(function(){//for buttons of the option2 class
+            newPath();
+            path = "walking";
+            nextElement();
+        })
+            $("#stop").click(function(){//for buttons of the option2 class
+                newPath();
+                path = "stop";
+                nextElement();
+            })
+            $("#goalong").click(function(){//for buttons of the option2 class
+                newPath();
+                path = "goalong";
+                nextElement();
+            })
+                $("#callout").click(function(){//for buttons of the option2 class
+                    newPath();
+                    path = "callout";
+                    nextElement();
+                })
+                $("#silent").click(function(){//for buttons of the option2 class
+                    newPath();
+                    path = "silent";
+                    nextElement();
+                })
     
     $("#romance").click(function(){//for buttons of the option2 class
         newPath();

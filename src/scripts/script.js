@@ -17,6 +17,16 @@ $(document).ready(function(){
         path = "normal";
         nextElement();
     })
+	$("#sleep").click(function(){//for buttons of the option1 class
+        newPath();
+        path = "sleep";
+        nextElement();
+    })
+	$("#awake").click(function(){//for buttons of the option1 class
+        newPath();
+        path = "awake";
+        nextElement();
+    })
     
     $("#depression").click(function(){//for buttons of the option2 class
         newPath();

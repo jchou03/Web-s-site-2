@@ -92,6 +92,16 @@ $(document).ready(function(){
            path = "Skip";
            nextElement();
         })
+		$("#SocialInteraction").click(function(){
+         	  newPath();
+        	   path = "SocialInteraction";
+        	   nextElement();
+       		 })
+			$("#WhatIsSociality").click(function(){
+         	  newPath();
+         	  path = "WhatIsSociality";
+         	  nextElement();
+       		 })
 })
 
 // function to show the next element and increase shown counter

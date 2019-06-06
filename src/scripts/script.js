@@ -241,6 +241,26 @@ $(document).ready(function(){
          	  path = "IgnoreDoor";
          	  nextElement();
        		 })
+							$("#ShareThoughts").click(function(){
+         	  newPath();
+         	  path = "ShareThoughts";
+         	  nextElement();
+       		 })
+							$("#KeepToYourself").click(function(){
+         	  newPath();
+         	  path = "KeepToYourself";
+         	  nextElement();
+       		 })
+								$("#IgnoreBlood").click(function(){
+         	  newPath();
+         	  path = "IgnoreBlood";
+         	  nextElement();
+       		 })
+								$("#AskAboutBlood").click(function(){
+         	  newPath();
+         	  path = "AskAboutBlood";
+         	  nextElement();
+       		 })
 })
 
 // function to show the next element and increase shown counter

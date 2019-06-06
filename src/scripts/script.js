@@ -261,6 +261,22 @@ $(document).ready(function(){
          	  path = "AskAboutBlood";
          	  nextElement();
        		 })
+									$("#PracticeWakizashi").click(function(){
+         	  newPath();
+         	  path = "PracticeWakizashi";
+         	  nextElement();
+       		 })
+									$("#StayHome").click(function(){
+         	  newPath();
+         	  path = "StayHome";
+         	  nextElement();
+       		 })
+									$("#PlayGames").click(function(){
+         	  newPath();
+         	  path = "PlayGames";
+         	  nextElement();
+       		 })
+	
 })
 
 // function to show the next element and increase shown counter

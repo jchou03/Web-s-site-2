@@ -221,6 +221,16 @@ $(document).ready(function(){
          	  path = "Lie";
          	  nextElement();
        		 })
+					$("#HangOut").click(function(){
+         	  newPath();
+         	  path = "HangOut";
+         	  nextElement();
+       		 })
+					$("#GoHome").click(function(){
+         	  newPath();
+         	  path = "GoHome";
+         	  nextElement();
+       		 })
 })
 
 // function to show the next element and increase shown counter

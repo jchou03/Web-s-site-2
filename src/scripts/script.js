@@ -211,6 +211,16 @@ $(document).ready(function(){
          	  path = "WhatIsSociality";
          	  nextElement();
        		 })
+				$("#Honesty").click(function(){
+         	  newPath();
+         	  path = "Honesty";
+         	  nextElement();
+       		 })
+				$("#Lie").click(function(){
+         	  newPath();
+         	  path = "Lie";
+         	  nextElement();
+       		 })
 })
 
 // function to show the next element and increase shown counter

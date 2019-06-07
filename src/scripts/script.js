@@ -287,12 +287,15 @@ function nextElement(){
         shown = 3;
         id = "#" + path + shown;
     }
-    if(!($(id).length)){
+    if(!($(id).length) && oldPath != ""){
         id="#"+ oldPath + oldShown;
         path = oldPath;
         shown = oldShown;
         oldPath="";
         oldShown=1;
+    }else if(!($(id).length)){
+        $(".content").append("<p script=\"text-align:center\"> The end </p>");
+        $(".next").hide();
     }
     
     console.log(id);

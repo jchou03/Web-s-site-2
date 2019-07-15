@@ -281,6 +281,11 @@ $(document).ready(function(){
 
 // function to show the next element and increase shown counter
 function nextElement(){
+    // hide description of website on first click of next
+    if($(".hideOnFirst").is(":visible")){
+        console.log("banana");
+        $(".hideOnFirst").hide();
+    }
     id= "#" + path + shown;
     if(id=="#noConfess5"){
         path = "confess";
